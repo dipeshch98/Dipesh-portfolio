@@ -1,4 +1,5 @@
 import React from 'react';
+import aboutImage from '../images/about.jpg';
 
 const About = () => {
   return (
@@ -14,7 +15,7 @@ const About = () => {
         <div className="w-52 h-52 md:w-64 md:h-64 rounded-full overflow-hidden shadow-md">
           <img
             className="w-full h-full object-cover"
-            src="src/images/about.jpg"
+            src={aboutImage}
             alt="About"
           />
         </div>

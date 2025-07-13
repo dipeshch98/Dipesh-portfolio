@@ -1,4 +1,5 @@
 import React from 'react';
+import profileImage from '../images/profile.jpeg';
 
 const Home = () => {
   return (
@@ -10,7 +11,7 @@ const Home = () => {
       <div className="w-52 h-52 md:w-64 md:h-64 rounded-full overflow-hidden shadow-md">
         <img
           className="w-full h-full object-cover"
-          src="src/images/profile.jpeg"
+          src={profileImage}
           alt="Profile"
         />
       </div>
