@@ -1,22 +1,28 @@
-import React from 'react';
+import React from "react";
 
 const ProjectCard = ({ image, title, description, link, github }) => {
   return (
-    <div className="w-80 md:w-96 border rounded-lg shadow-md p-4 text-left bg-white dark:bg-gray-800">
+    <div className="w-80 md:w-96 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-5 flex flex-col">
       <img
         src={image}
         alt={title}
-        className="w-full h-48 object-cover rounded"
+        className="w-full h-48 object-cover rounded-md"
+        loading="lazy"
       />
-      <h3 className="text-xl font-semibold mt-4">{title}</h3>
-      <p className="text-sm mt-2">{description}</p>
-      <div className="flex flex-col">
+      <h3 className="text-2xl font-semibold mt-5 text-gray-900 dark:text-gray-100">
+        {title}
+      </h3>
+      <p className="mt-3 text-gray-700 dark:text-gray-300 text-base leading-relaxed">
+        {description}
+      </p>
+      <div className="mt-auto pt-4 flex flex-col gap-2">
         {link && link.trim() !== "" && (
           <a
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-4 text-blue-500 hover:underline"
+            aria-label={`Visit project: ${title}`}
+            className="text-blue-600 dark:text-blue-400 hover:underline font-medium transition-colors duration-200"
           >
             🔗 Visit Project
           </a>
@@ -26,7 +32,8 @@ const ProjectCard = ({ image, title, description, link, github }) => {
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-2 text-blue-500 hover:underline"
+            aria-label={`View GitHub repository of ${title}`}
+            className="text-blue-600 dark:text-blue-400 hover:underline font-medium transition-colors duration-200"
           >
             💻 GitHub Code
           </a>
