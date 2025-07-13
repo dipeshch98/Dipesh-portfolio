@@ -14,7 +14,7 @@ const projectData = [
     title: "My Portfolio Website",
     description: "A personal portfolio showcasing my projects, skills, and content information in clean, responsive design.",
     link: "",
-    github: "",
+    github: "https://github.com/dipeshch98/Dipesh-portfolio",
   },
   {
     image: "/src/images/randomBlinking.png",
