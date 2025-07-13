@@ -9,10 +9,10 @@ const ProjectCard = ({ image, title, description, link, github }) => {
         className="w-full h-48 object-cover rounded-md"
         loading="lazy"
       />
-      <h3 className="text-2xl font-semibold mt-5 text-gray-900 dark:text-gray-100">
+      <h3 className="text-2xl font-semibold mt-5 text-white dark:text-gray-100">
         {title}
       </h3>
-      <p className="mt-3 text-gray-700 dark:text-gray-300 text-base leading-relaxed">
+      <p className="mt-3 text-white dark:text-gray-300 text-base leading-relaxed">
         {description}
       </p>
       <div className="mt-auto pt-4 flex flex-col gap-2">
