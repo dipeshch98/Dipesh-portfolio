@@ -1,59 +1,78 @@
 import React from 'react';
 
 const Contact = () => {
+  const contactLinks = [
+    {
+      label: "Email",
+      value: "chaudharydipesh9765@gmail.com",
+      icon: "📧",
+      link: "mailto:chaudharydipesh9765@gmail.com",
+      color: "hover:text-blue-400"
+    },
+    {
+      label: "LinkedIn",
+      value: "Dipesh Chaudhary",
+      icon: "🔗",
+      link: "https://www.linkedin.com/in/dipesh-chaudhary-028a40341/",
+      color: "hover:text-blue-500"
+    },
+    {
+      label: "GitHub",
+      value: "dipeshch98",
+      icon: "💻",
+      link: "https://github.com/dipeshch98",
+      color: "hover:text-gray-400"
+    },
+    {
+      label: "Location",
+      value: "Kathmandu, Nepal",
+      icon: "📌",
+      link: "#",
+      color: "hover:text-red-400"
+    }
+  ];
+
   return (
-    <div className="w-full py-20 px-6 font-sans  text-white" id="contact">
-      {/* Header */}
-      <div className="flex flex-col items-center text-center">
-        <h2 className="text-3xl md:text-4xl font-semibold">Contact Me</h2>
-        <p className="text-sm md:text-base pt-2 text-gray-300">Get in touch</p>
-      </div>
-
-      {/* Contact Info */}
-      <div className="flex flex-col md:flex-row justify-center items-start gap-12 md:gap-28 mt-14 max-w-4xl mx-auto">
-        {/* Basic Info */}
-        <div className="text-lg flex flex-col gap-4">
-          <p>📧 Email: chaudharydipesh9765@gmail.com</p>
-          <p>📞 Phone: +977 9825382298</p>
-          <p>📌 Location: Kathmandu, Nepal</p>
+    <section className="w-full py-24 bg-[#050505] px-6 text-white" id="contact">
+      <div className="max-w-5xl mx-auto">
+        
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Let's <span className="text-blue-500">Connect</span></h2>
+          <div className="w-16 h-1 bg-blue-600 mx-auto rounded-full mb-4"></div>
+          <p className="text-gray-400">Currently open to new opportunities and collaborations.</p>
         </div>
 
-        {/* Social Links */}
-        <div className="text-lg flex flex-col gap-4">
-          <p className="flex items-center gap-3">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-              alt="LinkedIn"
-              className="w-6 h-6"
-            />
+        {/* Contact Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {contactLinks.map((item, index) => (
             <a
-              href="https://www.linkedin.com/in/dipesh-chaudhary-028a40341/"
+              key={index}
+              href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline"
+              className={`flex items-center p-6 bg-[#111] border border-white/5 rounded-2xl transition-all duration-300 hover:border-blue-500/50 hover:bg-[#161616] group ${item.color}`}
             >
-              linkedin.com/in/dipesh-chaudhary-028a40341
+              <div className="text-3xl mr-5 group-hover:scale-110 transition-transform">
+                {item.icon}
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-1">{item.label}</p>
+                <p className="text-sm md:text-base font-medium text-gray-200 group-hover:text-inherit transition-colors">
+                  {item.value}
+                </p>
+              </div>
             </a>
-          </p>
-
-          <p className="flex items-center gap-3">
-            <img
-              src="https://www.svgrepo.com/show/475654/github-color.svg"
-              alt="GitHub"
-              className="w-6 h-6"
-            />
-            <a
-              href="https://github.com/dipeshch98"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-            >
-              github.com/dipeshch98
-            </a>
-          </p>
+          ))}
         </div>
+
+        {/* Minimal Footer */}
+        <div className="mt-24 pt-8 border-t border-white/5 text-center text-gray-600 text-sm">
+          <p>© {new Date().getFullYear()} Dipesh Chaudhary. Built with React & Tailwind.</p>
+        </div>
+
       </div>
-    </div>
+    </section>
   );
 };
 

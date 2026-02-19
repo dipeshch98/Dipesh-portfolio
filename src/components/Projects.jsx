@@ -1,77 +1,66 @@
-import React, { useState } from "react";
+import React from "react";
 import ProjectCard from "../card/ProjectCard";
 import rkworkshopImg from "../images/rkworkshop.png";
 import portfolioImg from "../images/portfolio.jpg";
 import randomBlinkingImg from "../images/randomBlinking.png";
+import webloftimg from "../images/webloft.png";
 
 const projectData = [
   {
+    image: webloftimg,
+    title: "Webloft Digital",
+    description: "Webloft is a full-stack web development agency building high-performance websites and scalable applications.",
+    link: "https://webloft.digital/",
+  },
+  {
     image: rkworkshopImg,
     title: "RK Workshop",
-    description:
-      "A simple website for RK Workshop to showcase services, location, and contact details for a local motor repair shop.",
+    description: "A professional service showcase for a local motor repair shop, featuring location and contact integration.",
     link: "https://rk-workshop.netlify.app/",
     github: "https://github.com/dipeshch98/RK-WORKSHOP",
   },
   {
     image: portfolioImg,
     title: "My Portfolio Website",
-    description:
-      "A personal portfolio showcasing my projects, skills, and contact information in clean, responsive design.",
+    description: "A personal portfolio showcasing my projects and skills. This description is intentionally a bit longer to test the height alignment of our grid system.",
     link: "https://chaudharydipesh.netlify.app/",
     github: "https://github.com/dipeshch98/Dipesh-portfolio",
   },
   {
     image: randomBlinkingImg,
     title: "Random Blinking Grid",
-    description:
-      "Boxes randomly blink blue on the screen, showcasing animation with timing and randomness.",
+    description: "An experimental animation project.",
     link: "https://random-blinking-grid.netlify.app/",
     github: "https://github.com/dipeshch98/Task4",
   },
 ];
 
 const Projects = () => {
-  const [current, setCurrent] = useState(0);
-
-  const handlePrev = () => {
-    setCurrent((prev) => (prev === 0 ? projectData.length - 1 : prev - 1));
-  };
-
-  const handleNext = () => {
-    setCurrent((prev) => (prev === projectData.length - 1 ? 0 : prev + 1));
-  };
-
   return (
-    <section
-      id="projects"
-      className="w-full max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8 font-sans text-center"
-    >
-      <h2 className="text-4xl font-extrabold text-white dark:text-gray-100">
-        Projects
-      </h2>
-      <p className="mt-2 text-lg text-white dark:text-gray-300">
-        Some of my recent work
-      </p>
+    <section id="projects" className="w-full bg-[#080808] py-24 px-6">
+      <div className="max-w-7xl mx-auto">
+        
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Featured Projects</h2>
+          <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
+        </div>
 
-      <div className="flex justify-center items-center mt-12 gap-6">
-        <button
-          onClick={handlePrev}
-          aria-label="Previous project"
-          className="text-3xl text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
-        >
-          &#8592;
-        </button>
-
-        <ProjectCard {...projectData[current]} />
-
-        <button
-          onClick={handleNext}
-          aria-label="Next project"
-          className="text-3xl text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
-        >
-          &#8594;
-        </button>
+        {/* grid-auto-rows-fr: This magic utility ensures every row 
+            takes the height of the tallest item in that specific row.
+        */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 grid-auto-rows-fr">
+          {projectData.map((project, index) => (
+            <div 
+              key={index} 
+              className="group relative flex flex-col h-full bg-[#111] border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/50 transition-all duration-300"
+            >
+              {/* ProjectCard needs to be styled to fill 100% height */}
+              <div className="flex flex-col h-full">
+                 <ProjectCard {...project} />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

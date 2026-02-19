@@ -5,16 +5,44 @@ import uiImg from '../images/ui.png'
 
 const Services = () => {
     return (
-        <div className='w-full py-20 font-sans' id='services'>
-            <div className="flex flex-col items-center text-center">
-                <h2 className="text-3xl md:text-4xl font-semibold">Services</h2>
-                <p className="text-sm md:text-base font-medium pt-2">What I Offer</p>
+        <section className='w-full px-6 py-24 bg-[#050505] text-white' id='services'>
+            <div className="max-w-7xl mx-auto">
+                
+                {/* Header Section */}
+                <div className="mb-16 space-y-2">
+                    <h2 className="text-4xl md:text-6xl font-bold tracking-tight">
+                        My <span className="text-blue-500">Expertise</span>
+                    </h2>
+                    <p className="text-gray-400 max-w-md">
+                        Combining technical proficiency with creative design to build high-performance digital products.
+                    </p>
+                    <div className="w-24 h-1 bg-blue-500 rounded-full"></div>
+                </div>
+
+                {/* The Responsive Grid */}
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8'>
+                    
+                    {/* Card 1 */}
+                    <div className="relative group">
+                        <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl blur opacity-20 group-hover:opacity-60 transition duration-500"></div>
+                        <div className="relative bg-[#111] border border-white/10 p-2 rounded-2xl h-full transition-transform duration-300 group-hover:-translate-y-2">
+                            <ServiceCard image={frontImg} name='Frontend Developer' />
+                        </div>
+                    </div>
+
+                    {/* Card 2 */}
+                    <div className="relative group">
+                        <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl blur opacity-20 group-hover:opacity-60 transition duration-500"></div>
+                        <div className="relative bg-[#111] border border-white/10 p-2 rounded-2xl h-full transition-transform duration-300 group-hover:-translate-y-2">
+                            <ServiceCard image={uiImg} name='UI Designer' />
+                        </div>
+                    </div>
+
+                    {/* Add more cards here as needed; the grid will handle them automatically */}
+
+                </div>
             </div>
-            <div className='flex justify-center py-10 m-auto gap-5 flex-wrap'>
-                <ServiceCard image={frontImg} name='Frontend Developer' />
-                <ServiceCard image={uiImg} name='UI Designer' />
-            </div>
-        </div>
+        </section>
     )
 }
 
