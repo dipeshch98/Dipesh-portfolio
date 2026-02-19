@@ -17,13 +17,14 @@ const SkillCard = ({ imgLink, imgName }) => (
 const Skills = () => {
   const skills = [
     { imgLink: "https://www.svgrepo.com/show/353925/javascript.svg", imgName: "JavaScript" },
+    { imgLink: "https://www.svgrepo.com/show/354113/nextjs-icon.svg", imgName: "Next.js" },
     { imgLink: "https://www.svgrepo.com/show/452092/react.svg", imgName: "React JS" },
     { imgLink: "https://www.svgrepo.com/show/374118/tailwind.svg", imgName: "Tailwind CSS" },
     { imgLink: "https://cdn-icons-png.flaticon.com/128/5968/5968672.png", imgName: "Bootstrap" },
     { imgLink: "https://www.svgrepo.com/show/452185/css-3.svg", imgName: "CSS3" },
     { imgLink: "https://www.svgrepo.com/show/448222/figma.svg", imgName: "Figma" },
     { imgLink: "https://www.svgrepo.com/show/374016/python.svg", imgName: "Python" },
-    { imgLink: "https://www.svgrepo.com/show/354113/nextjs-icon.svg", imgName: "Next.js" },
+    
   ];
 
   return (
