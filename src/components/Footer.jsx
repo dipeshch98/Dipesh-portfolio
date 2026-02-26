@@ -40,7 +40,7 @@ const Footer = () => {
             href="https://github.com/dipeshch98" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="opacity-70 hover:opacity-100 hover:-translate-y-1 transition-all duration-300 hover:scale-110"
+            className="hover:opacity-100 hover:-translate-y-1 transition-all duration-300 hover:scale-110"
           >
             <img src="https://www.svgrepo.com/show/475654/github-color.svg" alt="GitHub" className="w-8 h-8" />
           </a>
@@ -48,7 +48,7 @@ const Footer = () => {
             href="https://www.linkedin.com/in/dipesh-chaudhary-028a40341/" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="opacity-70 hover:opacity-100 hover:-translate-y-1 transition-all duration-300 hover:scale-110"
+            className="hover:opacity-100 hover:-translate-y-1 transition-all duration-300 hover:scale-110"
           >
             <img src="https://www.svgrepo.com/show/448234/linkedin.svg" alt="LinkedIn" className="w-8 h-8" />
           </a>
@@ -56,9 +56,9 @@ const Footer = () => {
             href="https://www.instagram.com/chaudharii_dipesh/" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="opacity-70 hover:opacity-100 hover:-translate-y-1 transition-all duration-300 hover:scale-110"
+            className="hover:opacity-100 hover:-translate-y-1 transition-all duration-300 hover:scale-110"
           >
-            <img src="https://www.svgrepo.com/show/452229/instagram-1.svg" alt="Instagram" className="w-8 h-8" />
+            <img src="https://cdn-icons-png.flaticon.com/128/174/174855.png" alt="Instagram" className="w-8 h-8" />
           </a>
         </div>
       </div>
