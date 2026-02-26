@@ -5,15 +5,23 @@ import portfolioImg from "../images/my_portfolio.png";
 import randomBlinkingImg from "../images/randomBlinking.png";
 import webloftimg from "../images/webloft.png";
 import { useTheme } from "../context/ThemeContext";
+import cassinnowImg from "../images/cassinnow.png";
 
 const projectData = [
   {
     image: webloftimg,
-    title: "Webloft Digital",
+    title: "Webloft Digital (IT Agency)",
     description: "Webloft is a full-stack web development agency building high-performance websites and scalable applications.",
     link: "https://webloft.digital/",
     github: "https://github.com/dipeshch98/webloft_Frontend-tsx-",
   },
+  {
+  image: cassinnowImg,
+  title: "Cassinnow",
+  description: "A responsive press release website designed for publishing news and official announcements, with organized article management and clean editorial layout.",
+  link: "https://casinnow.com/",
+  github: "https://github.com/dipeshch98/1000s-medias/tree/main/General%20_Business/VentureVoice",
+},
   {
     image: rkworkshopImg,
     title: "RK Workshop",
@@ -45,7 +53,7 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto">
         
         <div className="text-center mb-20">
-          <h2 className={`text-4xl md:text-5xl font-bold ${isDark ? 'text-white' : 'text-gray-900'} mb-4`}>My Works</h2>
+          <h2 className={`text-4xl md:text-5xl font-bold ${isDark ? 'text-white' : 'text-gray-900'} mb-4`}>My Projects</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
         </div>
 
