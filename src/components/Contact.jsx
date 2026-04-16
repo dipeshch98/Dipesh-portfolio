@@ -8,9 +8,9 @@ const Contact = () => {
   const contactLinks = [
     {
       label: "Email",
-      value: "chaudharydipesh9765@gmail.com",
+      value: "itsdipesh98@gmail.com",
       icon: "📧",
-      link: "mailto:chaudharydipesh9765@gmail.com",
+      link: "mailto:itsdipesh98@gmail.com",
       color: "hover:text-blue-500"
     },
     {
@@ -96,7 +96,7 @@ const Contact = () => {
         {/* CTA Button */}
         {/* <div className="flex justify-center mb-16">
           <a
-            href="mailto:chaudharydipesh9765@gmail.com"
+            href="mailto:itsdipesh98@gmail.com"
             className={`group inline-flex items-center justify-center gap-3 px-10 py-4 font-bold rounded-xl transition-all duration-300 active:scale-95 ${
               isDark
                 ? 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40'
